@@ -73,7 +73,7 @@ const reportLottery = () => {
   let lotteryResult = document.getElementById("root");
   let massLotteryPrint = document.createElement("p");
   massLotteryPrint.innerHTML =
-    "The Mass Lottery numbers were: " + massLotteryNums;
+    "The Mass Lottery numbers were: " + massLotteryNums.join(" ");
   lotteryResult.appendChild(massLotteryPrint);
 
   let luckyNumPrint = document.createElement("p");
@@ -81,7 +81,8 @@ const reportLottery = () => {
   lotteryResult.appendChild(luckyNumPrint);
 
   let playerLotteryPrint = document.createElement("p");
-  playerLotteryPrint.innerHTML = "Your numbers were: " + winningLotteryNums;
+  playerLotteryPrint.innerHTML =
+    "Your numbers were: " + winningLotteryNums.join(" ");
   lotteryResult.appendChild(playerLotteryPrint);
 
   let playerLuckyPrint = document.createElement("p");
